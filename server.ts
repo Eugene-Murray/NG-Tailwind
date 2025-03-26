@@ -41,6 +41,10 @@ export function app(): express.Express {
       .catch((err) => next(err));
   });
 
+  server.get('/data', (req, res, next) => {
+    res.send('Hello from Angular SSR Express Server!');
+  });
+
   return server;
 }
 
